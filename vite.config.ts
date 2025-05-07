@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Base path configuration for Cloudflare deployment
+  // Base path for Cloudflare Pages deployment
   base: "/",
   build: {
     outDir: 'dist',

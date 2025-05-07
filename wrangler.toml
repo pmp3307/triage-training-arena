@@ -1,17 +1,14 @@
 
 name = "medical-triage-simulator"
 compatibility_date = "2025-05-07"
+main = "./dist/index.html"
+workers_dev = true
 
-# Configure your site
 [site]
 bucket = "./dist"
 
-# Enable SPA routing by serving index.html for all routes
-[site.upload]
-format = "service-worker"
-dir = "./dist"
-main = "./dist/index.html"
-
-# Build command
 [build]
 command = "npm run build"
+
+[site.upload]
+format = "service-worker"
