@@ -6,12 +6,12 @@ compatibility_date = "2025-05-07"
 [site]
 bucket = "./dist"
 
-# Routes all requests to the index.html file to enable client-side routing
+# Enable SPA routing by serving index.html for all routes
 [site.upload]
 format = "service-worker"
+dir = "./dist"
+main = "./dist/index.html"
 
+# Build command
 [build]
-command = "npm run build" 
-[build.upload]
-format = "service-worker"
-
+command = "npm run build"

@@ -20,8 +20,8 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // Add base configuration for proper asset paths in production
-  base: "./",
+  // Base path configuration for Cloudflare deployment
+  base: "/",
   build: {
     outDir: 'dist',
   },
