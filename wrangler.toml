@@ -1,7 +1,6 @@
 
 name = "medical-triage-simulator"
 compatibility_date = "2025-05-07"
-main = "./dist/index.html"
 workers_dev = true
 
 [site]
