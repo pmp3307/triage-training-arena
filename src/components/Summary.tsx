@@ -7,7 +7,7 @@ import { cases } from '@/data/mockData';
 import { CheckCircle, XCircle, Clock, Medal, Gauge } from 'lucide-react';
 
 const Summary: React.FC = () => {
-  const { showSummary, stats, restartSimulation } = useSimulator();
+  const { showSummary, stats, restartSimulation, session } = useSimulator();
   
   // Calculate final score percentage
   const scorePercentage = Math.round((stats.correctDecisions / cases.length) * 100);
@@ -66,8 +66,8 @@ const Summary: React.FC = () => {
           
           <div className="border rounded-md divide-y divide-gray-100 mb-6">
             {cases.map((caseItem, index) => {
-              // Find the result for this case
-              const result = stats.caseResults?.[index];
+              // Find the result for this case from the session instead of stats
+              const result = session?.caseResults?.[index];
               const isCorrect = result?.isCorrect;
               
               return (

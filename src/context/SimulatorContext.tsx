@@ -17,6 +17,7 @@ interface SimulatorContextType {
   achievements: Achievement[];
   stats: UserStats;
   progress: number;
+  session: UserSession; // Added this line to expose session
   
   startSimulation: () => void;
   closeWelcome: () => void;
@@ -281,6 +282,7 @@ export const SimulatorProvider: React.FC<{ children: React.ReactNode }> = ({ chi
       achievements: session.achievements,
       stats: session.stats,
       progress,
+      session, // Added this line to expose session
       startSimulation,
       closeWelcome,
       selectDecision,
